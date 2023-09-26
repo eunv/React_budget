@@ -4,11 +4,12 @@ import { MdDelete, MdEdit } from 'react-icons/md';
 
 const ExpenseItem = ({ expense, handleEdit, handleDelete }) => {
   return (
-    <li>
-      <div>
-        <span>{expense.charge}</span>
-        <span>{expense.amount}</span>
+    <li className='item'>
+      <div className='info'>
+        <span className='expense'>{expense.charge}</span>
+        <span className='amount'>{expense.amount}</span>
       </div>
+      
       <button className='edit-btn'
         onClick={() => handleEdit(expense.id)}
       >
